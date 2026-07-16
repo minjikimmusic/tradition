@@ -11,11 +11,18 @@
     <div class="logo"><img class="logo-img" src="assets/icons/sogang-future-lab-logo.png" alt="SOGANG FUTURE LAB"></div>
     <nav>
       <a href="#profile">프로필</a>
+      <a href="#insights">연구 인사이트</a>
       <a href="#research">연구</a>
       <a href="#videos">연주 영상</a>
+      <a href="#tracks">연주 음원</a>
       <a href="#demos">연구 데모</a>
     </nav>
   </header>
+
+  <div class="bgm-bar">
+    <audio id="bgm" src="assets/audio/gohyangui-bom.mp3" loop preload="auto"></audio>
+    <button id="bgm-toggle" class="bgm-toggle" type="button" aria-pressed="true">🎵 Nostalgia - 고향의 봄</button>
+  </div>
 
   <section id="profile">
     <img class="profile-photo" src="profile.jpg" alt="김민지 프로필 사진">
@@ -34,16 +41,89 @@
     </ul>
   </section>
 
+  <section id="insights">
+    <p class="insight-lede">
+      국악을 공부하는 사람의 평생에 걸친 성장을 탐구합니다.<br>
+      국악 그 자체에서 출발해 학습과 교육, 진로, 교사 역량으로 확장되었고,<br>
+      지금은 디지털 음악 시각화에 초점을 맞추고 있습니다.
+    </p>
+
+    <div class="insight-tree">
+      <a href="#research" class="insight-node insight-satellite insight-pos-top">
+        <span class="insight-icon" aria-hidden="true">🎼</span>
+        <h3>국악</h3>
+        <div class="insight-desc-wrap">
+          <p class="insight-desc">가야금 연주와 이론적 토대가 되는 전통음악 그 자체</p>
+        </div>
+        <ul class="insight-tags">
+          <li>가야금</li>
+          <li>국악 이론</li>
+          <li>전통음악 분석</li>
+          <li>농현</li>
+          <li>시김새</li>
+          <li>장단</li>
+        </ul>
+      </a>
+
+      <a href="#research" class="insight-node insight-satellite insight-pos-left">
+        <span class="insight-icon" aria-hidden="true">👤</span>
+        <h3>진로교육</h3>
+        <div class="insight-desc-wrap">
+          <p class="insight-desc">국악인으로서 정체성과 커리어가 자라나는 과정</p>
+        </div>
+        <ul class="insight-tags">
+          <li>전문가 정체성</li>
+          <li>진로 개발</li>
+          <li>자기주도학습</li>
+          <li>평생학습</li>
+        </ul>
+      </a>
+
+      <a href="#research" class="insight-node insight-satellite insight-pos-right">
+        <span class="insight-icon" aria-hidden="true">🎓</span>
+        <h3>학교교육</h3>
+        <div class="insight-desc-wrap">
+          <p class="insight-desc">다음 세대에게 국악을 가르치는 교사와 교육과정에 대한 고민</p>
+        </div>
+        <ul class="insight-tags">
+          <li>교사 전문성</li>
+          <li>교사교육</li>
+          <li>교육과정 설계</li>
+          <li>AI 음악교육</li>
+          <li>디지털 리터러시</li>
+        </ul>
+      </a>
+
+      <a href="#demos" class="insight-node insight-hub insight-focus">
+        <span class="insight-badge">현재 연구 주제</span>
+        <span class="insight-icon" aria-hidden="true">✨</span>
+        <h3>디지털 음악 시각화</h3>
+        <div class="insight-desc-wrap">
+          <p class="insight-desc">국악 교육을 위해 데이터와 시각화로 소리를 다시 읽는 연구</p>
+        </div>
+        <ul class="insight-tags">
+          <li>음고 분석</li>
+          <li>연주 분석</li>
+          <li>학습 분석</li>
+          <li>CREPE</li>
+          <li>Sonic Visualiser</li>
+          <li>웹 기반 학습 플랫폼</li>
+        </ul>
+      </a>
+
+      <svg class="insight-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <line class="insight-line insight-line-top" x1="50" y1="50" x2="50" y2="26" />
+        <line class="insight-line insight-line-left" x1="50" y1="50" x2="18" y2="74" />
+        <line class="insight-line insight-line-right" x1="50" y1="50" x2="82" y2="74" />
+      </svg>
+    </div>
+  </section>
+
   <section id="research">
     <h2>연구</h2>
 
     <div class="pub-year">
       <h3>2026</h3>
-      <div class="pub-item">
-        <p class="pub-title"><strong>지속가능한 음악교육을 위한 맥락기반 AI 국악교육 프로그램 개발</strong></p>
-        <p class="pub-authors">오지향, 김민지</p>
-        <p class="pub-detail">미래음악교육학회, <em>미래음악연구</em> (KCI), 2권, 2026.08.31.</p>
-      </div>
       <div class="pub-item">
         <p class="pub-title"><strong>국악교육에서의 인공지능(AI) 활용 아리랑 가락선 비교 연구: F0 어노테이션을 중심으로</strong></p>
         <p class="pub-authors">김민지</p>
@@ -266,6 +346,171 @@
     </div>
   </section>
 
+  <section id="tracks">
+    <h2>연주 음원</h2>
+
+    <div class="album-block">
+      <img class="track-cover" src="assets/covers/kimyundeokryu-sanjo.png" alt="가야금 1집 김윤덕류 가야금 산조 앨범 표지">
+      <p class="track-album">가야금 1집 · 김윤덕류 가야금 산조</p>
+      <p class="track-album-link"><a href="https://www.yes24.com/product/goods/119139183" target="_blank" rel="noopener">앨범 정보 바로가기 →</a></p>
+    </div>
+
+    <div class="album-block">
+    <img class="track-cover" src="assets/covers/chanyeonhan-sijeol.png" alt="2집 가야금 창작음악 찬연한 시절 앨범 표지">
+    <p class="track-album">2집 가야금 창작음악 · 찬연한 시절 <span class="track-catalog">(GGC-20213)</span></p>
+    <p class="track-album-link"><a href="https://www.yes24.com/product/goods/189765115" target="_blank" rel="noopener">앨범 정보 바로가기 →</a></p>
+    <ul class="track-list">
+      <li class="track-item">
+        <div class="track-row">
+          <button class="track-play" type="button" aria-label="재생">🔊</button>
+          <span class="track-title">1. Nostalgia - 고향의 봄</span>
+          <audio src="assets/audio/album2/track-01.mp3" preload="none"></audio>
+          <button class="track-favorite" type="button" aria-label="즐겨찾기에 추가">☆</button>
+        </div>
+        <details class="track-feedback">
+          <summary>별점 남기기 · 감상 기록 보기</summary>
+          <div class="track-rating" role="radiogroup" aria-label="별점">
+            <button type="button" class="star" data-value="1" aria-label="1점">★</button>
+            <button type="button" class="star" data-value="2" aria-label="2점">★</button>
+            <button type="button" class="star" data-value="3" aria-label="3점">★</button>
+            <button type="button" class="star" data-value="4" aria-label="4점">★</button>
+            <button type="button" class="star" data-value="5" aria-label="5점">★</button>
+          </div>
+          <textarea class="track-comment" rows="2" placeholder="감상평을 남겨보세요"></textarea>
+          <button type="button" class="track-submit">기록 남기기</button>
+          <ul class="track-history"></ul>
+        </details>
+      </li>
+      <li class="track-item">
+        <div class="track-row">
+          <button class="track-play" type="button" aria-label="재생">🔊</button>
+          <span class="track-title">2. 25현 가야금 독주를 위한 ‘산바람 강바람’</span>
+          <audio src="assets/audio/album2/track-02.mp3" preload="none"></audio>
+          <button class="track-favorite" type="button" aria-label="즐겨찾기에 추가">☆</button>
+        </div>
+        <details class="track-feedback">
+          <summary>별점 남기기 · 감상 기록 보기</summary>
+          <div class="track-rating" role="radiogroup" aria-label="별점">
+            <button type="button" class="star" data-value="1" aria-label="1점">★</button>
+            <button type="button" class="star" data-value="2" aria-label="2점">★</button>
+            <button type="button" class="star" data-value="3" aria-label="3점">★</button>
+            <button type="button" class="star" data-value="4" aria-label="4점">★</button>
+            <button type="button" class="star" data-value="5" aria-label="5점">★</button>
+          </div>
+          <textarea class="track-comment" rows="2" placeholder="감상평을 남겨보세요"></textarea>
+          <button type="button" class="track-submit">기록 남기기</button>
+          <ul class="track-history"></ul>
+        </details>
+      </li>
+      <li class="track-item">
+        <div class="track-row">
+          <button class="track-play" type="button" aria-label="재생">🔊</button>
+          <span class="track-title">3. 두 대의 25현 가야금을 위한 ‘노을의 왈츠’</span>
+          <audio src="assets/audio/album2/track-03.mp3" preload="none"></audio>
+          <button class="track-favorite" type="button" aria-label="즐겨찾기에 추가">☆</button>
+        </div>
+        <details class="track-feedback">
+          <summary>별점 남기기 · 감상 기록 보기</summary>
+          <div class="track-rating" role="radiogroup" aria-label="별점">
+            <button type="button" class="star" data-value="1" aria-label="1점">★</button>
+            <button type="button" class="star" data-value="2" aria-label="2점">★</button>
+            <button type="button" class="star" data-value="3" aria-label="3점">★</button>
+            <button type="button" class="star" data-value="4" aria-label="4점">★</button>
+            <button type="button" class="star" data-value="5" aria-label="5점">★</button>
+          </div>
+          <textarea class="track-comment" rows="2" placeholder="감상평을 남겨보세요"></textarea>
+          <button type="button" class="track-submit">기록 남기기</button>
+          <ul class="track-history"></ul>
+        </details>
+      </li>
+      <li class="track-item">
+        <div class="track-row">
+          <button class="track-play" type="button" aria-label="재생">🔊</button>
+          <span class="track-title">4. 섬집아기 주제에 의한 가야금 2중주 ‘섬나라 자장소리’</span>
+          <audio src="assets/audio/album2/track-04.mp3" preload="none"></audio>
+          <button class="track-favorite" type="button" aria-label="즐겨찾기에 추가">☆</button>
+        </div>
+        <details class="track-feedback">
+          <summary>별점 남기기 · 감상 기록 보기</summary>
+          <div class="track-rating" role="radiogroup" aria-label="별점">
+            <button type="button" class="star" data-value="1" aria-label="1점">★</button>
+            <button type="button" class="star" data-value="2" aria-label="2점">★</button>
+            <button type="button" class="star" data-value="3" aria-label="3점">★</button>
+            <button type="button" class="star" data-value="4" aria-label="4점">★</button>
+            <button type="button" class="star" data-value="5" aria-label="5점">★</button>
+          </div>
+          <textarea class="track-comment" rows="2" placeholder="감상평을 남겨보세요"></textarea>
+          <button type="button" class="track-submit">기록 남기기</button>
+          <ul class="track-history"></ul>
+        </details>
+      </li>
+      <li class="track-item">
+        <div class="track-row">
+          <button class="track-play" type="button" aria-label="재생">🔊</button>
+          <span class="track-title">5. 2대의 25현 가야금을 위한 ‘반월’ (낮에 나온 반달)</span>
+          <audio src="assets/audio/album2/track-05.mp3" preload="none"></audio>
+          <button class="track-favorite" type="button" aria-label="즐겨찾기에 추가">☆</button>
+        </div>
+        <details class="track-feedback">
+          <summary>별점 남기기 · 감상 기록 보기</summary>
+          <div class="track-rating" role="radiogroup" aria-label="별점">
+            <button type="button" class="star" data-value="1" aria-label="1점">★</button>
+            <button type="button" class="star" data-value="2" aria-label="2점">★</button>
+            <button type="button" class="star" data-value="3" aria-label="3점">★</button>
+            <button type="button" class="star" data-value="4" aria-label="4점">★</button>
+            <button type="button" class="star" data-value="5" aria-label="5점">★</button>
+          </div>
+          <textarea class="track-comment" rows="2" placeholder="감상평을 남겨보세요"></textarea>
+          <button type="button" class="track-submit">기록 남기기</button>
+          <ul class="track-history"></ul>
+        </details>
+      </li>
+      <li class="track-item">
+        <div class="track-row">
+          <button class="track-play" type="button" aria-label="재생">🔊</button>
+          <span class="track-title">6. 25현 가야금 독주곡 ‘여, 화락화’ (녹두꽃이 떨어지면)</span>
+          <audio src="assets/audio/album2/track-06.mp3" preload="none"></audio>
+          <button class="track-favorite" type="button" aria-label="즐겨찾기에 추가">☆</button>
+        </div>
+        <details class="track-feedback">
+          <summary>별점 남기기 · 감상 기록 보기</summary>
+          <div class="track-rating" role="radiogroup" aria-label="별점">
+            <button type="button" class="star" data-value="1" aria-label="1점">★</button>
+            <button type="button" class="star" data-value="2" aria-label="2점">★</button>
+            <button type="button" class="star" data-value="3" aria-label="3점">★</button>
+            <button type="button" class="star" data-value="4" aria-label="4점">★</button>
+            <button type="button" class="star" data-value="5" aria-label="5점">★</button>
+          </div>
+          <textarea class="track-comment" rows="2" placeholder="감상평을 남겨보세요"></textarea>
+          <button type="button" class="track-submit">기록 남기기</button>
+          <ul class="track-history"></ul>
+        </details>
+      </li>
+      <li class="track-item">
+        <div class="track-row">
+          <button class="track-play" type="button" aria-label="재생">🔊</button>
+          <span class="track-title">7. 25현 가야금 삼중주를 위한 강강술래 변주곡</span>
+          <audio src="assets/audio/album2/track-07.mp3" preload="none"></audio>
+          <button class="track-favorite" type="button" aria-label="즐겨찾기에 추가">☆</button>
+        </div>
+        <details class="track-feedback">
+          <summary>별점 남기기 · 감상 기록 보기</summary>
+          <div class="track-rating" role="radiogroup" aria-label="별점">
+            <button type="button" class="star" data-value="1" aria-label="1점">★</button>
+            <button type="button" class="star" data-value="2" aria-label="2점">★</button>
+            <button type="button" class="star" data-value="3" aria-label="3점">★</button>
+            <button type="button" class="star" data-value="4" aria-label="4점">★</button>
+            <button type="button" class="star" data-value="5" aria-label="5점">★</button>
+          </div>
+          <textarea class="track-comment" rows="2" placeholder="감상평을 남겨보세요"></textarea>
+          <button type="button" class="track-submit">기록 남기기</button>
+          <ul class="track-history"></ul>
+        </details>
+      </li>
+    </ul>
+    </div>
+  </section>
+
   <section id="demos">
     <h2>연구 데모</h2>
     <div class="card-grid">
@@ -276,6 +521,7 @@
         <p><a href="https://minjikimmusic.github.io/jangdan-visualization/" target="_blank" rel="noopener">데모 바로가기 →</a></p>
       </div>
       <div class="card">
+        <div class="card-thumb"><img src="assets/demos/jangdan-assessment.png" alt="장단 인지 능력 평가 웹도구 화면"></div>
         <h3>장단 평가</h3>
         <p>국악 장단 학습 성취도를 평가할 수 있는 웹 기반 도구입니다.</p>
         <p><a href="https://minjikimmusic.github.io/jangdan-assessment-a/" target="_blank" rel="noopener">데모 바로가기 →</a></p>
@@ -286,5 +532,152 @@
   <footer>
     &copy; 2026 김민지
   </footer>
+
+  <script>
+    const bgm = document.getElementById('bgm');
+    const bgmToggle = document.getElementById('bgm-toggle');
+    let bgmEnabled = true;
+    bgm.volume = 0.15;
+
+    function syncBgmButton() {
+      bgmToggle.textContent = (bgmEnabled ? '🎵 ' : '🔇 ') + 'Nostalgia - 고향의 봄';
+      bgmToggle.setAttribute('aria-pressed', String(bgmEnabled));
+    }
+
+    function attemptBgmPlay() {
+      if (!bgmEnabled) return;
+      bgm.play().catch(() => {});
+    }
+
+    attemptBgmPlay();
+    syncBgmButton();
+
+    bgmToggle.addEventListener('click', () => {
+      bgmEnabled = !bgmEnabled;
+      if (bgmEnabled) {
+        attemptBgmPlay();
+      } else {
+        bgm.pause();
+      }
+      syncBgmButton();
+    });
+
+    // 브라우저 자동재생 정책으로 재생이 막힌 경우, 첫 사용자 상호작용 시 재시도
+    document.addEventListener('pointerdown', attemptBgmPlay, { once: true });
+
+    // 연주 음원 목록: 재생/일시정지 토글과 즐겨찾기 별표
+    document.querySelectorAll('.track-item').forEach((item) => {
+      const audio = item.querySelector('audio');
+      const playBtn = item.querySelector('.track-play');
+      const favBtn = item.querySelector('.track-favorite');
+      const favKey = 'favorite:' + audio.getAttribute('src');
+
+      if (localStorage.getItem(favKey) === '1') {
+        favBtn.textContent = '★';
+        favBtn.classList.add('is-favorite');
+      }
+
+      playBtn.addEventListener('click', () => {
+        if (audio.paused) {
+          document.querySelectorAll('#tracks audio').forEach((other) => {
+            if (other !== audio) other.pause();
+          });
+          bgmEnabled = false;
+          bgm.pause();
+          syncBgmButton();
+          audio.play();
+        } else {
+          audio.pause();
+        }
+      });
+
+      audio.addEventListener('play', () => { playBtn.textContent = '⏸️'; });
+      audio.addEventListener('pause', () => { playBtn.textContent = '🔊'; });
+      audio.addEventListener('ended', () => { playBtn.textContent = '🔊'; });
+
+      favBtn.addEventListener('click', () => {
+        const isFavorite = favBtn.classList.toggle('is-favorite');
+        favBtn.textContent = isFavorite ? '★' : '☆';
+        if (isFavorite) {
+          localStorage.setItem(favKey, '1');
+        } else {
+          localStorage.removeItem(favKey);
+        }
+      });
+
+      // 별점 + 감상평 기록 (브라우저에만 저장되는 나만의 히스토리)
+      const historyKey = 'history:' + audio.getAttribute('src');
+      const starButtons = item.querySelectorAll('.track-rating .star');
+      const commentInput = item.querySelector('.track-comment');
+      const submitBtn = item.querySelector('.track-submit');
+      const historyList = item.querySelector('.track-history');
+      let currentRating = 0;
+
+      function setRating(value) {
+        currentRating = value;
+        starButtons.forEach((star) => {
+          star.classList.toggle('is-active', Number(star.dataset.value) <= value);
+        });
+      }
+
+      starButtons.forEach((star) => {
+        star.addEventListener('click', () => setRating(Number(star.dataset.value)));
+      });
+
+      function loadHistory() {
+        try {
+          return JSON.parse(localStorage.getItem(historyKey)) || [];
+        } catch (e) {
+          return [];
+        }
+      }
+
+      function renderHistory() {
+        const entries = loadHistory();
+        historyList.innerHTML = '';
+        if (entries.length === 0) {
+          const li = document.createElement('li');
+          li.className = 'history-empty';
+          li.textContent = '아직 남긴 기록이 없습니다.';
+          historyList.appendChild(li);
+          return;
+        }
+        entries.forEach((entry) => {
+          const li = document.createElement('li');
+          const starsSpan = document.createElement('span');
+          starsSpan.className = 'history-stars';
+          starsSpan.textContent = '★'.repeat(entry.stars) + '☆'.repeat(5 - entry.stars);
+          li.appendChild(starsSpan);
+          if (entry.comment) {
+            li.appendChild(document.createTextNode(entry.comment));
+          }
+          const dateSpan = document.createElement('span');
+          dateSpan.className = 'history-date';
+          dateSpan.textContent = entry.date;
+          li.appendChild(dateSpan);
+          historyList.appendChild(li);
+        });
+      }
+
+      submitBtn.addEventListener('click', () => {
+        if (currentRating === 0) {
+          window.alert('별점을 선택해 주세요.');
+          return;
+        }
+        const entries = loadHistory();
+        entries.unshift({
+          stars: currentRating,
+          comment: commentInput.value.trim(),
+          date: new Date().toLocaleDateString('ko-KR'),
+        });
+        localStorage.setItem(historyKey, JSON.stringify(entries));
+        commentInput.value = '';
+        setRating(0);
+        renderHistory();
+      });
+
+      renderHistory();
+    });
+  </script>
 </body>
 </html>

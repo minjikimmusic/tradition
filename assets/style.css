@@ -11,6 +11,13 @@
   --color-border: #e5e5e5;
   --color-border-light: #f0f0f0;
   --color-shadow: rgba(17, 17, 17, 0.08);
+
+  /* 연구 인사이트(#insights) 섹션 전용 색상 */
+  --color-accent: #A8D5BA;
+  --color-accent-strong: #8FC8A9;
+  --color-accent-bg: rgba(168, 213, 186, 0.12);
+  --color-accent-glow: rgba(143, 200, 169, 0.45);
+  --color-insight-text: #1F2937;
 }
 
 * {
@@ -59,6 +66,34 @@ header nav a {
 
 header nav a:hover {
   text-decoration: underline;
+}
+
+/* 배경음악 재생/정지 버튼 바: 헤더 바로 아래에서 함께 상단에 고정 */
+.bgm-bar {
+  position: sticky;
+  top: 88px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 40px;
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border-light);
+  z-index: 9;
+}
+
+.bgm-toggle {
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg);
+  color: var(--color-text-tertiary);
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.bgm-toggle:hover {
+  background-color: var(--color-bg-muted);
+  color: var(--color-text);
 }
 
 /* 공통 섹션 레이아웃 */
@@ -293,6 +328,195 @@ section > p.intro {
   font-weight: 600;
 }
 
+/* 연주 음원(#tracks) 앨범 트랙 리스트 */
+.album-block + .album-block {
+  margin-top: 48px;
+  padding-top: 40px;
+  border-top: 1px solid var(--color-border-light);
+}
+
+.track-cover {
+  display: block;
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 0 auto 20px;
+  box-shadow: 0 8px 20px var(--color-shadow);
+}
+
+.track-album {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.track-catalog {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.track-album-link {
+  margin-bottom: 24px;
+}
+
+.track-album-link a {
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.track-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  border-top: 1px solid var(--color-border);
+}
+
+.track-item {
+  padding: 10px 4px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.track-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 4px;
+  border-radius: 8px;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.track-row:hover {
+  transform: scale(1.02);
+  background-color: var(--color-bg-muted);
+}
+
+.track-play {
+  flex: none;
+  border: none;
+  background: none;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.track-title {
+  flex: 1;
+  font-size: 0.95rem;
+}
+
+.track-favorite {
+  flex: none;
+  border: none;
+  background: none;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px;
+  color: var(--color-text-muted);
+}
+
+.track-favorite.is-favorite {
+  color: var(--color-text);
+}
+
+/* 트랙별 별점·감상평 기록 */
+.track-feedback {
+  margin: 6px 4px 0;
+}
+
+.track-feedback summary {
+  cursor: pointer;
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+}
+
+.track-feedback[open] summary {
+  margin-bottom: 10px;
+}
+
+.track-rating {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.track-rating .star {
+  border: none;
+  background: none;
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 2px;
+  color: var(--color-border);
+}
+
+.track-rating .star.is-active {
+  color: var(--color-text);
+}
+
+.track-comment {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  resize: vertical;
+  margin-bottom: 8px;
+}
+
+.track-submit {
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg);
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.track-submit:hover {
+  background-color: var(--color-bg-muted);
+}
+
+.track-history {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.track-history li {
+  border-top: 1px solid var(--color-border-light);
+  padding-top: 8px;
+  font-size: 0.82rem;
+  color: var(--color-text-tertiary);
+}
+
+.track-history .history-stars {
+  color: var(--color-text);
+  margin-right: 8px;
+}
+
+.track-history .history-date {
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  margin-left: 8px;
+}
+
+.track-history .history-empty {
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
 /* 포트폴리오(portfolio.html) 프로젝트 카드 그리드 */
 .project-grid {
   display: grid;
@@ -324,6 +548,241 @@ section > p.intro {
   color: var(--color-text-tertiary);
   font-size: 0.9rem;
   line-height: 1.5;
+}
+
+/* 연구 인사이트(#insights): 연구 철학을 트리 형태로 보여주는 인터랙티브 섹션 */
+#insights {
+  max-width: 760px;
+}
+
+.insight-lede {
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  margin-bottom: 56px;
+}
+
+/* 중앙 허브(현재 연구 주제)를 중심으로 세 노드가 방사형으로 뻗어나가는 마인드맵 레이아웃 */
+.insight-tree {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  height: 760px;
+  margin: 0 auto;
+}
+
+.insight-node {
+  display: block;
+  width: 240px;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 24px;
+  text-decoration: none;
+  color: var(--color-insight-text);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+.insight-satellite,
+.insight-hub {
+  position: absolute;
+  max-width: 46%;
+}
+
+/* 위치는 transform이 아닌 top/left/right/margin으로 고정한다 (hover 시 scale·translateY와 충돌 방지) */
+.insight-pos-top {
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.insight-pos-left {
+  bottom: 0;
+  left: 0;
+}
+
+.insight-pos-right {
+  bottom: 0;
+  right: 0;
+}
+
+.insight-hub {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 260px;
+  max-width: 50%;
+  height: fit-content;
+  z-index: 2;
+}
+
+.insight-node:hover,
+.insight-node:focus-visible {
+  transform: scale(1.08) translateY(-4px);
+  border-color: var(--color-accent-strong);
+  box-shadow: 0 16px 32px var(--color-accent-bg);
+  z-index: 3;
+}
+
+/* 방사형 연결선: 허브에서 각 노드로 뻗는 SVG 선 */
+.insight-lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.insight-line {
+  stroke: var(--color-border);
+  stroke-width: 0.6;
+  vector-effect: non-scaling-stroke;
+  transition: stroke 0.3s ease;
+}
+
+.insight-pos-top:hover ~ .insight-lines .insight-line-top,
+.insight-pos-top:focus-visible ~ .insight-lines .insight-line-top,
+.insight-hub:hover ~ .insight-lines .insight-line-top,
+.insight-hub:focus-visible ~ .insight-lines .insight-line-top {
+  stroke: var(--color-accent-strong);
+}
+
+.insight-pos-left:hover ~ .insight-lines .insight-line-left,
+.insight-pos-left:focus-visible ~ .insight-lines .insight-line-left,
+.insight-hub:hover ~ .insight-lines .insight-line-left,
+.insight-hub:focus-visible ~ .insight-lines .insight-line-left {
+  stroke: var(--color-accent-strong);
+}
+
+.insight-pos-right:hover ~ .insight-lines .insight-line-right,
+.insight-pos-right:focus-visible ~ .insight-lines .insight-line-right,
+.insight-hub:hover ~ .insight-lines .insight-line-right,
+.insight-hub:focus-visible ~ .insight-lines .insight-line-right {
+  stroke: var(--color-accent-strong);
+}
+
+/* 하나의 노드에 마우스를 올리면 나머지는 살짝 흐려져 시선이 집중된다 */
+.insight-tree:hover .insight-node {
+  opacity: 0.55;
+}
+
+.insight-tree:hover .insight-node:hover {
+  opacity: 1;
+}
+
+.insight-icon {
+  display: block;
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  transition: transform 0.3s ease;
+}
+
+.insight-node:hover .insight-icon,
+.insight-node:focus-visible .insight-icon {
+  transform: scale(1.2);
+}
+
+.insight-node h3 {
+  margin: 0 0 4px;
+  font-size: 1.05rem;
+}
+
+/* 설명 문구는 평소엔 접혀 있다가 hover/focus 시 펼쳐진다 */
+.insight-desc-wrap {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.insight-node:hover .insight-desc-wrap,
+.insight-node:focus-visible .insight-desc-wrap {
+  max-height: 60px;
+}
+
+.insight-desc {
+  margin: 0 0 10px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--color-text-tertiary);
+}
+
+.insight-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0;
+  margin: 0;
+}
+
+.insight-tags li {
+  background-color: var(--color-bg-muted);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 0.78rem;
+  color: var(--color-text-tertiary);
+}
+
+/* 현재 연구 주제 노드(중앙 허브): 항상 강조 + 은은한 펄스 애니메이션 */
+.insight-focus {
+  border-color: var(--color-accent-strong);
+  background-color: var(--color-accent-bg);
+  animation: insight-pulse 3s ease-in-out infinite;
+}
+
+.insight-badge {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: var(--color-insight-text);
+  border-radius: 999px;
+  padding: 3px 12px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+@keyframes insight-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 rgba(143, 200, 169, 0);
+  }
+  50% {
+    box-shadow: 0 0 24px var(--color-accent-glow);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .insight-focus {
+    animation: none;
+  }
+}
+
+/* 모바일: 방사형 배치 대신 세로 목록으로 단순화 */
+@media (max-width: 700px) {
+  .insight-tree {
+    position: static;
+    aspect-ratio: auto;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .insight-satellite,
+  .insight-hub {
+    position: static;
+    width: 100%;
+    max-width: 320px;
+    margin: 0;
+  }
+
+  .insight-lines {
+    display: none;
+  }
 }
 
 footer {
