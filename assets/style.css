@@ -210,6 +210,18 @@ section > p.intro {
   padding: 20px;
 }
 
+/* 카드 상단 이미지(데모 화면 캡처) */
+.card-thumb {
+  margin: -20px -20px 16px;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+}
+
+.card-thumb img {
+  width: 100%;
+  display: block;
+}
+
 .card h3 {
   margin: 0 0 8px;
   font-size: 1.05rem;
