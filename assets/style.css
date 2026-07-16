@@ -1,0 +1,322 @@
+/* 색상 변수 정의 */
+:root {
+  --color-bg: #ffffff;
+  --color-bg-muted: #f2f2f2;
+  --color-text: #111111;
+  --color-text-secondary: #333333;
+  --color-text-tertiary: #444444;
+  --color-text-quaternary: #555555;
+  --color-text-caption: #666666;
+  --color-text-muted: #999999;
+  --color-border: #e5e5e5;
+  --color-border-light: #f0f0f0;
+  --color-shadow: rgba(17, 17, 17, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* 상단 고정 헤더 */
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-bg);
+  z-index: 10;
+}
+
+header .logo {
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+
+/* 헤더 좌측 로고 이미지 */
+.logo-img {
+  height: 48px;
+  width: auto;
+}
+
+header nav a {
+  color: var(--color-text);
+  text-decoration: none;
+  margin-left: 28px;
+  font-size: 0.95rem;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* 공통 섹션 레이아웃 */
+section {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  text-align: center;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+section:last-of-type {
+  border-bottom: none;
+}
+
+.profile-photo {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  margin-bottom: 24px;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 40px;
+}
+
+section > p.intro {
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  margin-bottom: 28px;
+}
+
+.tags {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.tags li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--color-bg-muted);
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-size: 0.9rem;
+}
+
+/* 이모지 대신 사진을 사용하는 태그의 아이콘 */
+.tag-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* 연구(#research) 섹션: 목록 가독성을 위해 좌측 정렬 */
+#research {
+  max-width: 760px;
+  text-align: left;
+}
+
+#research h2 {
+  text-align: center;
+}
+
+.pub-year h3 {
+  font-size: 1.2rem;
+  margin: 40px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--color-text);
+}
+
+.pub-year:first-of-type h3 {
+  margin-top: 0;
+}
+
+.pub-item {
+  margin-bottom: 22px;
+}
+
+.pub-title {
+  margin: 0 0 4px;
+  font-size: 1rem;
+}
+
+.pub-title::before {
+  content: "• ";
+}
+
+.pub-authors {
+  margin: 0 0 4px;
+  color: var(--color-text-tertiary);
+  font-size: 0.9rem;
+}
+
+.pub-detail {
+  margin: 0;
+  color: var(--color-text-quaternary);
+  font-size: 0.9rem;
+}
+
+/* 논문 항목 하단의 PDF 바로가기 배지 */
+.pub-pdf {
+  margin: 6px 0 0;
+}
+
+.pdf-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  color: var(--color-text-quaternary);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.pdf-badge:hover {
+  background-color: var(--color-bg-muted);
+  color: var(--color-text);
+}
+
+/* 연구 데모(#demos) 카드 그리드 */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  text-align: left;
+}
+
+.card {
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+}
+
+.card p {
+  margin: 0;
+  color: var(--color-text-tertiary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.card p + p {
+  margin-top: 8px;
+}
+
+.card a {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+/* 연주 영상(#videos) 카드 그리드 */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.video-card {
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.video-card .thumb {
+  aspect-ratio: 16 / 9;
+  background-color: var(--color-bg-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.video-card .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-card .caption {
+  padding: 14px 16px;
+}
+
+.video-card .caption h3 {
+  margin: 0 0 4px;
+  font-size: 1rem;
+}
+
+.video-card .caption p {
+  margin: 0;
+  color: var(--color-text-caption);
+  font-size: 0.85rem;
+}
+
+.video-card .caption a {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+/* 포트폴리오(portfolio.html) 프로젝트 카드 그리드 */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  text-align: left;
+}
+
+.project-card {
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* hover 시 살짝 떠오르는 효과 */
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px var(--color-shadow);
+}
+
+.project-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+}
+
+.project-card p {
+  margin: 0;
+  color: var(--color-text-tertiary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 24px;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
